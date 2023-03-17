@@ -1,0 +1,96 @@
+.opening{
+    color: rgb(0, 0, 0);
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    padding: 1%;
+    margin: 2%;
+    font-size: clamp(1rem, 2.5vw, 2rem);
+}
+h3{
+    position: relative;
+    align-self: end;
+    animation-name: welcome;
+    animation-duration: 4s;
+    font-size: clamp(.9rem, 2.5vw, 1rem);
+}
+.straight-line{
+    height: 4px;
+    width: 96%;
+    background-color: black;
+    margin: 2%;
+}
+.navbar{
+    background-color: hsla(0, 0%, 71%, 0);
+    height: max-content;
+    width: 96%;
+    margin-top: -2%;
+
+}
+ul{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    list-style-type: none;
+    justify-content: space-evenly;
+    font-size: clamp(.5rem, 2.5vw, 1.2rem);
+
+}
+.parent{
+    display: grid;
+    grid-template-columns: .5fr .5fr 2fr .5fr .5fr;
+    grid-template-rows: repeat(5, 20%);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+}
+
+.parent__hoop{
+    width: 100%;
+    height: auto;
+    align-items: center;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 5;
+    opacity: .8;
+}
+.parent__miss{
+    align-self: center;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 2;
+    font-size: clamp(1rem, 2.5vw, 2rem);
+    position: relative;
+    animation-name: welcome;
+    animation-duration: 9s;
+    margin-bottom: 1%;
+}
+.parent__shots{
+    text-align: end;
+    align-self:end;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 4;
+    grid-row-end: 4;
+    font-size: clamp(1rem, 2.5vw, 2rem);
+    position: relative;
+    animation-name: welcome;
+    animation-duration: 7s;
+}
+.author{
+    text-align: end;
+    align-self:center;
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 5;
+    grid-row-end: 5;
+    font-size: clamp(.5rem, 2.5vw, 1rem);
+    position: relative;
+    animation-name: welcome;
+    animation-duration: 6s;
+}
+@keyframes welcome {
+    0%   {left:-900px; top:0px;}
+    25%  {left:0px; top:0px;}
+}
