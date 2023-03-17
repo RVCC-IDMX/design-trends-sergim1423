@@ -90,6 +90,55 @@ ul{
     animation-name: welcome;
     animation-duration: 6s;
 }
+.box{
+    height: max-content;
+    width: max-content;
+    border: 3px solid black;
+    padding: 1%;
+    margin: 1%;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    align-self: center;
+}
+.gallery{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(7, .8fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;  
+}
+.gallery img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.gallery__1{
+    grid-column-start: 5;
+    grid-column-end: 5;
+    grid-row-start: 6;
+    grid-row-end: 8;
+}
+.gallery__2{
+    grid-column-start: 3;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 6;
+}
+.gallery__3{
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+.gallery__4{
+    grid-column-start: 4;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
 @keyframes welcome {
     0%   {left:-900px; top:0px;}
     25%  {left:0px; top:0px;}
