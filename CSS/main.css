@@ -1,3 +1,36 @@
+@font-face {
+    font-family: Cormorant-italic;
+    src: url('/fonts/cormorant-italic-variablefont_wght-webfont.woff2') format('woff2 supports variations'),
+         url('/fonts/cormorant-italic-variablefont_wght-webfont.woff') format('woff2-variations');
+    font-weight: 400 700;
+    font-display: swap;
+    font-style: italic;
+}
+@font-face {
+    font-family: Cormorant-normal;
+    src:
+    url('/fonts/cormorant-variablefont_wght-webfont.woff2') format('woff2 supports variations'),
+    url('/fonts/cormorant-variablefont_wght-webfont.woff') format('woff2-variations');
+    font-weight: 400 700;
+    font-display: swap;
+    font-style: normal;
+}
+@font-face {
+    font-family: Ibareal-italic;
+    src: url('/fonts/ibarrarealnova-italic-variablefont_wght-webfont.woff') format('woff2-variations'),
+    url('/fonts/ibarrarealnova-italic-variablefont_wght-webfont.woff2') format('woff2 supports variations');
+    font-weight: 400 700;
+    font-display: swap;
+    font-style: italic;
+}
+@font-face {
+    font-family: Ibareal-normal;
+    src: url('/fonts/ibarrarealnova-variablefont_wght-webfont.woff') format('woff2-variations'),
+    url('/fonts/ibarrarealnova-variablefont_wght-webfont.woff2') format('woff2 supports variations');
+    font-weight: 100 700;
+    font-display: swap;
+    font-style: normal;
+}
 .opening{
     color: rgb(0, 0, 0);
     display: flex;
@@ -6,13 +39,47 @@
     padding: 1%;
     margin: 2%;
     font-size: clamp(1rem, 2.5vw, 2rem);
+    font-family: Cormorant-normal;
+    font-weight: bold;
+    font-style: normal;
 }
-h3{
+h1{
+    font-family: Cormorant-normal;
+    font-style: normal;
+    font-size: clamp(1rem, 4.5vw, 3rem);
+    letter-spacing: 5px;
+
+}
+h2{
+    font-family: Cormorant-normal;
+    font-style: normal;
+}
+.opening p{
+    font-family: Ibareal-italic;
+    font-style: normal;
+    font-weight: 700;
     position: relative;
     align-self: end;
     animation-name: welcome;
     animation-duration: 4s;
-    font-size: clamp(.9rem, 2.5vw, 1rem);
+    font-size: clamp(.1rem, 3.5vw, .5rem);
+}
+h3{
+    font-family: Ibareal-italic;
+    font-style: normal;
+    font-weight: 700;
+    position: relative;
+    align-self: end;
+    animation-name: welcome;
+    animation-duration: 4s;
+    font-size: clamp(.8rem, 2.5vw, 2rem);
+}
+p{
+    font-family: Ibareal-italic;
+    font-style: normal;
+    font-weight: 700;
+    font-size: clamp(.5rem, 2.5vw, 1rem);
+
 }
 .straight-line, .short-line{
     height: 4px;
@@ -34,6 +101,9 @@ ul{
     list-style-type: none;
     justify-content: space-evenly;
     font-size: clamp(.5rem, 2.5vw, 1.2rem);
+    font-family: Ibareal-normal;
+    font-style: normal;
+    font-weight: 400;
 
 }
 .parent{
@@ -65,7 +135,7 @@ ul{
     position: relative;
     animation-name: welcome;
     animation-duration: 9s;
-    margin-bottom: 1%;
+    margin-bottom: 4%;
 }
 .parent__shots{
     text-align: end;
@@ -172,7 +242,9 @@ ul{
 .under-dummy-text{
     width: 100%;
     height: 100%;
-    margin-top: 70%;
+}
+.h1-dummy-text{
+    font-size: clamp(1.1rem, 3.5vw, 2.2rem);
 }
 .hoop-text{
     grid-column-start: 3;
@@ -198,8 +270,30 @@ input{
     display: flex;
     justify-content: space-between;
     margin: 2%;
+
 }
 @keyframes welcome {
     0%   {left:-900px; top:0px;}
     25%  {left:0px; top:0px;}
+}
+@media only screen and (max-width: 768px) {
+    .gallery {
+      display: block;
+      grid-template-columns: 1fr;
+      grid-row-gap: 100px;
+    }
+    .box{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    .gallery img{
+        width: 50%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    
+  }
 }
